@@ -63,6 +63,19 @@ const Data=[
   }
 ];
 
+const handleClick=(index)=>{
+  const targetElement = document.getElementById(index)
+    let computedStyle = window.getComputedStyle(targetElement);
+    if(computedStyle){
+      var backgroundColor = computedStyle.backgroundColor;
+      if(backgroundColor==='rgb(244, 244, 245)'){
+        targetElement.style.backgroundColor = '#7246FD';
+      }else{
+        targetElement.style.backgroundColor = '#F4F4F5';
+      }    
+  }
+}
+
 const LightFinder4 = () => {
 
   return (
@@ -78,16 +91,17 @@ const LightFinder4 = () => {
         </div>
         
         <div className="text-black grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-8 md:gap-x-11 xl:gap-x-14 gap-y-4 pl-4 lg:pl-8 w-3/4 mt-5 relative z-10">
-          {Data.map((image)=>{
-            return (
-            <div className="bg-[#F4F4F5] py-6 box rounded-md cursor-pointer">
-            <div className="mx-5 flex flex-col items-center text-center">
-            <img className="w-16 icon" src={image.Image} alt={image.name} />
-            <p className="pt-2">{image.name}</p>
+          {Data.map((image,index)=>{
+              const id="id"+index;
+              return (
+              <div id={id} className="bg-[#F4F4F5] py-6 box rounded-md cursor-pointer" onClick={() => handleClick(id)}>
+              <div className="mx-5 flex flex-col items-center text-center">
+              <img className="w-16 icon" src={image.Image} alt={image.name} />
+              <p className="pt-2">{image.name}</p>
+              </div>
             </div>
-          </div>
-            )
-          }
+              )
+            }
           )}
         </div>
 
