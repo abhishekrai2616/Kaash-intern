@@ -1,0 +1,7 @@
+.box:hover .icon{
+    background: linear-gradient(
+      to bottom,
+      transparent 4.48%,
+      rgba(252, 255, 103, 0.932) 98.23%
+    );
+  }
