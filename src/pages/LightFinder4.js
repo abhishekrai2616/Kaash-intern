@@ -19,8 +19,7 @@ import wallCove from '../images/Wall cove.png'
 
 // importing background ellipes image
 
-import back_ground_ellipes from "../Light_finder_images/Ellipse_17.png";
-
+import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 // Array of Icon and there name
 
 const Data=[
@@ -79,13 +78,9 @@ const handleClick=(index)=>{
 const LightFinder4 = () => {
 
   return (
-    <div className="h-full relative select-none">
-      <div>
-        <Navbargrey />
-      </div>
-      <div className="px-8 md:px-20 bg-[#E4E4E7]">
+      <div className="px-8 md:px-20 pb-28 lg:pb-48 select-none">
       {/* Ellipse */}
-        <img class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none" src={back_ground_ellipes}/>
+        <img class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none" src={second_ellipes}/>
         <div>
           <p className="pl-4 lg:pl-8 pt-8 text-lg">3. Choose light position (select multiple if applicable).</p>
         </div>
@@ -104,35 +99,7 @@ const LightFinder4 = () => {
             }
           )}
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 md:gap-x-11 xl:gap-x-14 gap-y-4 pl-4 lg:pl-8 w-3/4 items-center py-28 lg:py-40 mt-4">
-          <div className=" flex gap-5 cursor-pointer">
-          <Link to="/lightfinder3">
-            <div className="flex gap-6 bg-transparent border-2 border-solid border-[#7246FD] px-5 py-.5 hover:bg-[#7246FD] hover:text-white  text-[#7246FD] bg-[#D4D4D8]">
-              <div className="text-2xl lg:text-3xl font-light">{'\u003C'}</div>
-              <button className="font-semibold text-base md:text-lg">Back</button>
-            </div>
-          </Link> 
-           <Link to="/lightfinder5">
-            <div className="flex gap-6 bg-[#7246FD] border-2 border-solid border-[#7246FD] px-5 py-.5 text-white">
-              <button className="font-semibold text-base md:text-lg">Next</button>
-              <div className="text-2xl lg:text-3xl font-light">{'\u003E'}</div>
-            </div>
-          </Link>
-          </div>
-          <div className="flex gap-x-1 items-center">
-            <div className="bg-[#7246FD] h-3.5 w-20 rounded-l-lg  align-bottom"></div>
-            <div className="bg-[#7246FD] h-3.5 w-20"></div>
-            <div className="bg-[#7246FD] h-3.5 w-20 "></div>
-            <div className="bg-[#D4D4D8] h-3.5 w-20 "></div>
-            <div className="bg-[#D4D4D8] h-3.5 w-20 "></div>
-            <div className="bg-[#D4D4D8] h-3.5 w-20 "></div>
-            <div className="bg-[#D4D4D8] h-3.5 w-20 rounded-r-lg"></div>
-            <text className="text-xl font-semibold text-[#7246FD] ml-5">3/7</text>
-          </div>
-        </div>
       </div>
-    </div>
   );
 };
 
